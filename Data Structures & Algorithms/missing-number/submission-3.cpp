@@ -1,0 +1,16 @@
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        // using xor;
+        int n = nums.size();
+        int xor1 =0;
+
+        for(int i=0; i<n; i++){
+            xor1 ^=nums[i];
+        }
+        for(int i=0; i<=n;i++){
+            xor1 ^=i;
+        }
+        return xor1;
+    }
+};
